@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: void-engine
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: PANEL_KEY
+        value: mdwK1vU0EYtuoZInbBazkf9cMhXAiHW7
+      - key: KEEP_URL
+        sync: false
